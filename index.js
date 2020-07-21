@@ -36,7 +36,7 @@ if (require.main === module) {
           default: parseInt(process.env.SSHPORT, 10) || 22,
         },
         sshuser: {
-          demand: false,
+          demand: true,
           description: 'ssh user',
           type: 'string',
           default: process.env.SSHUSER || '',

@@ -48,9 +48,9 @@ export default function createServer(
   // Allow helmet to be bypassed.
   // Unfortunately, order matters with middleware
   // which is why this is thrown in the middle
-  if (!bypasshelmet) {
-    app.use(helmet());
-  }
+  //if (!bypasshelmet) {
+  //app.use(helmet());
+  //}
 
   const client = html(base, title);
   app.get(basePath, client).get(`${basePath}/ssh/:user`, client);
@@ -72,7 +72,7 @@ export default function createServer(
     {
       path: `${basePath}/socket.io`,
       pingInterval: 3000,
-      pingTimeout: 7000
+      pingTimeout: 7000,
     }
   );
 }
