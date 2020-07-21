@@ -45,7 +45,7 @@ if (require.main === module) {
           demand: false,
           description: 'window title',
           type: 'string',
-          default: process.env.TITLE || 'WeTTy - The Web Terminal Emulator',
+          default: process.env.TITLE || 'Jibris On Demand',
         },
         sshauth: {
           demand: false,
@@ -71,7 +71,7 @@ if (require.main === module) {
           demand: false,
           description: 'Connecting through ssh even if running as root',
           type: 'boolean',
-          default: process.env.FORCESSH || false
+          default: process.env.FORCESSH || false,
         },
         knownhosts: {
           demand: false,
@@ -110,7 +110,7 @@ if (require.main === module) {
           demand: false,
           description: 'disable helmet from placing security restrictions',
           type: 'boolean',
-          default: false,
+          default: true,
         },
         help: {
           demand: false,
